@@ -1,0 +1,47 @@
+// ENCAPSULATION
+// hiding data within a library,preventing it from outside factors
+// encapsulation in dart:
+// 1) declare class properties as private using _
+// 2) provide getter & setter methods to access and update value of private property
+// NOTE: to make a property or method private, dart uses underscore (_)
+// getter and setter aren't necessary, its only on us if we need them/not
+
+class Student{
+  String? _name;
+  int? _age;
+
+  // getter to get name
+  String getName(){
+    return this._name!;
+  }
+  // getter to get age
+  int getAge(){
+    return this._age!;
+  }
+  // setter to set name
+  void setName(String name){
+    this._name = name;
+  }
+  void setAge(int age){
+    if(age < 0){
+      this._age = 0;
+    }
+    this._age = age;
+  }
+}
+void main(){
+  Student s = Student();
+  s._age = 22;
+  s._name = 'Shashank';
+  print(s._name);
+  print(s._age);
+}
+// the private members/functions will only work inside this library, if we import this library(main.dart) to other code file and try to use them there, it won't work
+// to use private members in other file,we can use getters & setters 
+// void main(){
+// Student s = Student();
+// s.setAge(14);
+// s.setName('Mike');
+// print(getName());
+// print(getAge());
+// }
