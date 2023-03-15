@@ -1,0 +1,40 @@
+// INHERITANCE
+// parent class
+class Phone{
+  final int phoneNo;
+  Phone(this.phoneNo);    // syntactic sugar constructor
+
+  void call(){
+    print('calling on $phoneNo');
+  }
+}
+// child class
+class SmartPhone extends Phone{
+  // we make a constructor for SmartPhone and take phoneNo in it,and passed phoneNo to super, when we ctrl+click on super,it'll take us directly to Phone class , super is our parent class's constructor
+  SmartPhone(int phoneNo):super(phoneNo);
+
+  void turnOnData(){
+    print('Data turned on!');
+  }
+}
+void main(){
+  var phone = Phone(100);
+  phone.call();
+  var smartphone = SmartPhone(101);
+  smartphone.call();  // call is fn() in class Phone,but since SmartPhone is child class of Phone, its objects can also access functions of Phone
+  smartphone.turnOnData();  
+}
+
+// STANDARD TO DECLARE A CLASS
+// CLASS NAME
+// CONSTRUCTOR
+// PROPERTIES
+// METHODS
+// class Phone{
+//   Phone(this.phoneNo);    // syntactic sugar constructor
+//   final int phoneNo;
+//   // METHOD
+//   void call(){
+//     print('calling on $phoneNo');
+//   }
+// }
