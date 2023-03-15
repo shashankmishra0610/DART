@@ -1,0 +1,23 @@
+// SETTERS & GETTERS 
+// setter takes values but doesn't return any value
+class SmartPhone{
+  // properties
+  String color = 'blue';
+  double size = 5.6;
+  String panel = 'panel';
+  // this is a setter used to set the color of our object
+  set setColor(String color){
+    this.color = color;
+  }
+  // getter always returns a value, no need to pass any arguments
+  String get getColor{
+    return this.color;
+  }
+}
+void main(){
+  var smartMax = SmartPhone();
+  // smartMax.color = 'green';   //(value we're setting)
+  smartMax.setColor = 'green';   // SETTER(will set the value of color to green)
+  // print(smartMax.color);      // (value we're getting)
+  print(smartMax.getColor);      // GETTER(returns value of object)
+}
