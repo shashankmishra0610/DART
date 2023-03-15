@@ -45,3 +45,4 @@ void main(){
 // print(getName());
 // print(getAge());
 // }
+// private members are only visible to the labrary i.e. the file in which they're made
