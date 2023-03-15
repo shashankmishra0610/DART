@@ -1,0 +1,47 @@
+class SmartPhone{
+  // properties
+  String color = 'blue';
+  double size = 5.6;
+  String panel = 'LCD';
+
+  // default constructor
+  // SmartPhone(){
+  //   print('default constructor is running!');
+  // }
+
+  // this keyword
+  // SmartPhone(String color,double size,String panel){
+  //   this.color = color;
+  //   this.size = size;
+  //   this.panel = panel;
+  // }
+
+  // Syntactic sugar (shortcut constructor)
+  SmartPhone(this.color,this.size,this.panel);
+
+  // named constructor
+  SmartPhone.blueTablet(){
+    this.size = 10;
+    this.color = 'yellow';
+  }
+  
+  // methods
+  void turnOn5G(){
+    print('5G turned on');
+  }
+}
+void main(){
+  // now it won't print the default values in class, it'll print the values we gave i.e. a nexon Smartphone has been created of black color, 32 size and panel is LED
+  var nexon = SmartPhone('black',32,'LED');
+  var maxProTab = SmartPhone.blueTablet();
+  print(maxProTab.size);
+  
+  // nexon.color = 'red';
+  // print(nexon.color);
+  // print(nexon.size);
+  // print(nexon.panel);
+  // nexon.turnOn5G();
+}
+
+// NOTE: the default constructor we make can only be used to define single constructor, we can't define another constructor with it
+// NOTE: constructor is a special type of function which doesn't return any value
