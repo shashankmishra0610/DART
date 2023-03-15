@@ -83,3 +83,24 @@
 // NOTE: example of using NAMED PARAMETER & NAMED CONSTRUCTOR together
 // Add.num3({this.n1,this.n2,this.n3});
 // Add b = Add.num3(n1:23, n2:34, n3:50);
+
+// Constant Constructor
+// constructor that creates a constant object, a constant object is an object whose value can't be changed
+// constant constructor is declared using keyword const
+class Point{
+  final int x;
+  final int y;
+
+  const Point({required this.x,required this.y});
+}
+void main(){
+  Point p1 = const Point(x:10, y:20);
+  Point p2 = const Point(x:10, y:20);
+
+  print(p1.x);
+  print(p2.y);
+  print(p1.hashCode);         // both will be same hashCode due to const
+  print(p2.hashCode);
+  // p1.x = 34;        // can't modify value of x using p1 object because of const
+  // print(p1.x);
+}
