@@ -1,0 +1,50 @@
+// CONSTRUCTORS
+class Person{
+  // ? is for NULL SAFETY,means we declare name and initialize later and it won't contain null due to ?
+  String?name;     
+  int?age;
+  
+  // default constructor
+  // Person(){
+  //   print('Constructor is called!');
+  // }
+
+  // parameterised constructor
+  // Person(String n,int a){
+  //   // this.name refers to class name, RHS name refers to
+  //   // this means for object p, this p.name = 'Shashank' p.age=22
+  //   this.name = n;   
+  //   this.age = a;
+  // }
+
+  // Constructor in single-line
+  // Person(this.name,this.age);
+
+  // Constructor with Optional-Parameter
+  // Person(this.name,[this.age]);
+  // if we don't give age value,it'll be null
+  
+  // optional parameter with DEFAULT VALUE(if user gives age then it'll be taken otherwise by default 18 will be taken)
+  // Person(this.name,[this.age = 18]);
+
+  // Constructor with NAMED PARAMETER
+  // here required means its necessary for user to give the values
+  Person({required this.name,required this.age});
+  
+  void display(){
+    print('Name is $name');
+    print('Age is $age');
+    // OR
+    // print('Name is ${this.name}');
+    // print('Age is ${this.age}');
+  }
+}
+void main(){
+  // when we make an object for class Person, default constructor gets executed automatically
+  Person p = Person(name:'Shashank',age:22);  
+  p.display();
+
+  Person p2 = Person(name:'Harry',age:30);
+  p2.display();
+  // this way we can create multiple objects of the same class using constructor
+}
