@@ -1,0 +1,85 @@
+// Default Constructor
+// constructor with no parameter, gets automatically created by the dart compiler if we don't create it and gets executed when an object is created of the class 
+// class Laptop{
+//   // properties
+//   String?brand;
+//   double?price;
+
+//   // default constructor
+//   Laptop(){
+//     this.brand = 'MACBOOK';
+//   }
+// }
+// void main(){
+//   Laptop l = Laptop();
+//   print(l.brand);
+// }
+
+// NOTE: NAMED PARAMETER COMES IN {}
+// eg : Student({this.id,this.name,this.rollNo,this.school='KPS SCHOOL'});
+// Student s = Student(id:1,name:'PARTH',rollNo:34);
+
+// Parameterized Constructor
+// constructor with parameters
+// class Student{
+//   int id;
+//   String name;
+//   int rollNo;
+//   String school;
+
+//   Student(this.id,this.name,this.rollNo,this.school);
+
+//   void display(){
+//     print('Id is $id');
+//     print('Name is $name');
+//     print('Roll No is $rollNo');
+//     print('School is $school');
+//   }
+// }
+// void main(){
+//   Student s = Student(1,'PARTH',34,'KPS SCHOOL');
+//   s.display();
+
+//   Student s2 = Student(2,'MANISH',12,'SGS SCHOOL');
+//   s2.display();
+// }
+
+// NOTE: if we use required in our name parameter
+// Student(
+// { required this.id,
+//   required this.name,
+//   required this.rollNo,
+//   this.school='KPS SCHOOL'       // since already defined school, no need to write required
+// });
+
+// NAMED CONSTRUCTOR
+// in languages like c++,java we can create multiple constructors with same name
+// but in dart its not possible , hence to create multiple constructors with same name we'll use NAMED CONSTRUCTORS
+// class Add{
+//   int?n1;
+//   int?n2;
+//   int?n3;
+//   // parameterized constructor
+//   Add(this.n1,this.n2);
+//   // named constructor
+//   Add.num3(this.n1,this.n2,this.n3);
+
+//   void display(){
+//     if(n3==null){
+//       n3 = 0;
+//     }
+//     int sum = n1! + n2! + n3!;       // ! is for NULL-SAFETY
+//     print('Sum is $sum');
+//   }
+
+// }
+// void main(){
+//   Add a = Add(10,20);      // using parameterized constructor
+//   a.display();
+
+//   Add b = Add.num3(23,34,50);
+//   b.display();
+// }
+// NOTE: example of using NAMED PARAMETER & NAMED CONSTRUCTOR together
+// Add.num3({this.n1,this.n2,this.n3});
+// Add b = Add.num3(n1:23, n2:34, n3:50);
