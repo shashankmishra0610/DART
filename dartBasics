@@ -1,1 +1,12 @@
-dynamic type varialbes means we can change their type in future
+//dynamic type varialbes means we can change their type in future
+
+// LIST
+List names = ['shashank','aditya','naman'];
+// to add and remove
+names.add('vaibhav');
+names.remove('shashank');
+print(names);
+
+// LIST OF STRING OR INT
+List<int> numbers = [1,2,3,4,5];
+List<String> str = ['rahul','sonia','rajeev','indira'];
